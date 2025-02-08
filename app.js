@@ -28,11 +28,15 @@ app.post('/create',async (req, res) => {
     })
     console.log(usercreated);
     res.redirect('/');
-   
+})
+
+app.get('/read',async (req, res) => {
+  let user = await userModel.find();
+   res.render('show',{u:user});
 })
 
 const PORT= process.env.PORT
 
 app.listen(PORT,function(){
-    console.log('listening on port '+ PORT);
+    console.log('listening on port ' + PORT);
 })

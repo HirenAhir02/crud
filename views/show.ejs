@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style src="/public/stylesheets/index.css"></style>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Hiren</title>
+</head>
+<body>
+        <div class="w-full h-screen  bg-zinc-900 p-10 text-white">
+            <div class="flex justify-end">
+                <a class="px-2 py-1 bg-blue-600  rounded-md" href="/">Back</a>
+            </div>
+            <div class="card flex flex-wrap gap-4">
+                <% u.forEach(function(user){ %>
+                    <div class="user w-min h-min border-2 border-zinc-500 rounded-md px-4 ">
+                        <h1 class="text-center text-3xl text-blue-600 font-semibold "> <%= user.name %></h1>
+                        <h3 class="text-center text-sm mt-2 "><%= user.email %></h3>
+                        <p class="text-center text-red-600 mt-2">age : <%= user.age %></p>
+                    </div>
+               <% }) %>
+            </div>
+        </div>
+</body>
+</html>
