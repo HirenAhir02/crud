@@ -23,6 +23,4 @@ app.post('/create',async (req, res) => {
    
 })
 
-app.listen(3000,function(){
-    console.log('listening on port 3000');
-})
+
