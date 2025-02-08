@@ -5,8 +5,11 @@ const userModel = require('./models/user-model');
 const connectDB = require('./connectMongo');
 
 require('dotenv').config();
-
 connectDB();
+
+const cors = require('cors');
+app.use(cors()); // Allow frontend to send requests
+
 
 app.set('view engine', 'ejs');
 app.use(express.json());
