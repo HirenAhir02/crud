@@ -2,6 +2,11 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const userModel = require('./models/user-model');
+const connectDB = require('./connectMongo');
+
+require('dotenv').config();
+
+connectDB();
 
 app.set('view engine', 'ejs');
 app.use(express.json());
@@ -23,6 +28,8 @@ app.post('/create',async (req, res) => {
    
 })
 
-// Export the app (NO `app.listen()`)
-module.exports = app;
+const PORT= process.env.PORT
 
+app.listen(PORT,function(){
+    console.log('listening on port '+ PORT);
+})
