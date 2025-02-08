@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="w-full h-screen bg-zinc-900 text-white p-10 flex items-center justify-center">
+        <div class="w-72 h-72  border-2 border-zinc-700 rounded-md px-10 ">
+            <h1 class="text-xl font-semibold text-center mb-4 mt-1">Hello 👋</h1>
+            <form action="/create" method="post" class="flex flex-col gap-2">
+                <input class="px-3 py-2 border-2 border-zinc-600 rounded-md outline-none" type="text" name="name" placeholder="Enter Your Name..">
+                <input class="px-3 py-2 border-2 border-zinc-600 rounded-md outline-none" type="text" name="email" placeholder="Enter Email..">
+                <input class="px-3 py-2 border-2 border-zinc-600 rounded-md outline-none" type="number" name="age" placeholder="Enter Age.."><br>
+                <input class="px-3 py-1  bg-blue-600 rounded-md " type="submit" value="submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
